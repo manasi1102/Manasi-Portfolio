@@ -121,7 +121,7 @@
                     Transforming raw data into meaningful insights and creating data-driven solutions.
                 </p>
                 <div class="flex flex-wrap justify-center md:justify-start gap-4">
-                    <a href="assets/HemaManasiP-Resume.pdf" target="_blank" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition shadow-lg hover:shadow-xl">
+                    <a href="assets/HemaManasi-Resume.pdf" target="_blank" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition shadow-lg hover:shadow-xl">
                             View Resume
                         </a>
                     <a href="#projects" class="px-6 py-3 border-2 border-blue-600 text-blue-600 hover:bg-blue-50 rounded-full font-medium transition">
@@ -363,7 +363,7 @@
                         <div>
                             <h4 class="font-medium text-gray-800">IBM Data Analysis with Python</h4>
                             <p class="text-gray-600 text-sm">IBM • 2022</p>
-                            <a href="https://coursera.org/share/a1f86fed0ea927b7c5cde453ce56faaa" class="text-blue-600 text-sm hover:underline mt-1 inline-block">View Credential</a>
+                            <a href="https://coursera.org/share/a1f86fed0ea927b7c5cde453ce56faaa" target="_blank" class="text-blue-600 text-sm hover:underline mt-1 inline-block">View Credential</a>
                         </div>
                     </div>
 
@@ -374,7 +374,7 @@
                         <div>
                             <h4 class="font-medium text-gray-800">IBM Databases and SQL for Data Science</h4>
                             <p class="text-gray-600 text-sm">IBM • 2022</p>
-                            <a href="https://coursera.org/share/446a095975d52a57105af1bf9fb097c3" class="text-blue-600 text-sm hover:underline mt-1 inline-block">View Credential</a>
+                            <a href="https://coursera.org/share/446a095975d52a57105af1bf9fb097c3" target="_blank" class="text-blue-600 text-sm hover:underline mt-1 inline-block">View Credential</a>
                         </div>
                     </div>
 
@@ -385,7 +385,7 @@
                         <div>
                             <h4 class="font-medium text-gray-800">IBM Python for Data Science, AI & Development</h4>
                             <p class="text-gray-600 text-sm">IBM • 2022</p>
-                            <a href="https://www.coursera.org/account/accomplishments/verify/9ZMEB2QWMFYZ" class="text-blue-600 text-sm hover:underline mt-1 inline-block">View Credential</a>
+                            <a href="https://www.coursera.org/account/accomplishments/verify/9ZMEB2QWMFYZ" target="_blank" class="text-blue-600 text-sm hover:underline mt-1 inline-block">View Credential</a>
                         </div>
                     </div>
 
@@ -398,7 +398,7 @@
                             <div>
                                 <h4 class="font-medium text-gray-800">Tools for Data Science</h4>
                                 <p class="text-gray-600 text-sm">IBM • 2022</p>
-                                <a href="https://coursera.org/share/bc8f3f6a74de6bba009ad06cf88bea0d" class="text-blue-600 text-sm hover:underline mt-1 inline-block">View Credential</a>
+                                <a href="https://coursera.org/share/bc8f3f6a74de6bba009ad06cf88bea0d" target="_blank" class="text-blue-600 text-sm hover:underline mt-1 inline-block">View Credential</a>
                             </div>
                         </div>
                     </div>
@@ -411,7 +411,20 @@
                     </div>
                 </div>
             </div>
-            
+            <script>
+                function toggleCertifications() {
+                    const moreCerts = document.getElementById('moreCerts');
+                    const toggleBtn = document.getElementById('toggleCerts');
+
+                    if (moreCerts.classList.contains('hidden')) {
+                        moreCerts.classList.remove('hidden');
+                        toggleBtn.textContent = "View Less";
+                    } else {
+                        moreCerts.classList.add('hidden');
+                        toggleBtn.textContent = "View More";
+                    }
+                }
+            </script>
 
         </div>
     </section>
@@ -540,8 +553,8 @@
                             <span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">Prophet</span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <a href="https://github.com/manasi1102/Supply-Chain-Optimization-Platform/blob/main/README.md" class="text-blue-600 text-sm font-medium hover:underline">View Details</a>
-                            <a href="https://github.com/manasi1102/Supply-Chain-Optimization-Platform" class="text-gray-500 hover:text-gray-700">
+                            <a href="https://github.com/manasi1102/Supply-Chain-Optimization-Platform/blob/main/README.md" target="_blank" class="text-blue-600 text-sm font-medium hover:underline">View Details</a>
+                            <a href="https://github.com/manasi1102/Supply-Chain-Optimization-Platform" target="_blank" class="text-gray-500 hover:text-gray-700">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -570,8 +583,8 @@
                             <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">EDA</span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <a href="https://github.com/manasi1102/SMS-Spam-Detection/blob/4c12f13de69794a2695dbf80bb00057d45714064/README.md" class="text-blue-600 text-sm font-medium hover:underline">View Details</a>
-                            <a href="https://github.com/manasi1102/SMS-Spam-Detection.git" class="text-gray-500 hover:text-gray-700">
+                            <a href="https://github.com/manasi1102/SMS-Spam-Detection/blob/4c12f13de69794a2695dbf80bb00057d45714064/README.md" target="_blank" class="text-blue-600 text-sm font-medium hover:underline">View Details</a>
+                            <a href="https://github.com/manasi1102/SMS-Spam-Detection.git" target="_blank" class="text-gray-500 hover:text-gray-700">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -599,8 +612,8 @@
                             <span class="px-2 py-1 bg-pink-100 text pink-800 rounded-full text-xs">Geospatial</span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <a href="https://github.com/manasi1102/LAPD-Crime-Dataset-Visualisation/blob/main/README.md" class="text-blue-600 text-sm font-medium hover:underline">View Details</a>
-                            <a href="https://github.com/manasi1102/LAPD-Crime-Dataset-Visualisation.git" class="text-gray-500 hover:text-gray-700">
+                            <a href="https://github.com/manasi1102/LAPD-Crime-Dataset-Visualisation/blob/main/README.md" target="_blank" class="text-blue-600 text-sm font-medium hover:underline">View Details</a>
+                            <a href="https://github.com/manasi1102/LAPD-Crime-Dataset-Visualisation.git" target="_blank" class="text-gray-500 hover:text-gray-700">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -625,8 +638,8 @@
                             <span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">Data Visualization</span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <a href="https://github.com/manasi1102/Performance_Tracker_Tableau-Dashboard/blob/main/README.md" class="text-blue-600 text-sm font-medium hover:underline">View Details</a>
-                            <a href="https://github.com/manasi1102/Performance_Tracker_Tableau-Dashboard.git" class="text-gray-500 hover:text-gray-700">
+                            <a href="https://github.com/manasi1102/Performance_Tracker_Tableau-Dashboard/blob/main/README.md" target="_blank" class="text-blue-600 text-sm font-medium hover:underline">View Details</a>
+                            <a href="https://github.com/manasi1102/Performance_Tracker_Tableau-Dashboard.git" target="_blank" class="text-gray-500 hover:text-gray-700">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -651,8 +664,8 @@
                             <span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">Random Forest</span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <a href="https://github.com/manasi1102/Book-Recommendation-System/blob/f3e741d5c3a54c57373da054da3f22a40c5a1120/README.md" class="text-blue-600 text-sm font-medium hover:underline">View Details</a>
-                            <a href="https://github.com/manasi1102/Book-Recommendation-System.git" class="text-gray-500 hover:text-gray-700">
+                            <a href="https://github.com/manasi1102/Book-Recommendation-System/blob/f3e741d5c3a54c57373da054da3f22a40c5a1120/README.md" target="_blank" class="text-blue-600 text-sm font-medium hover:underline">View Details</a>
+                            <a href="https://github.com/manasi1102/Book-Recommendation-System.git" target="_blank" class="text-gray-500 hover:text-gray-700">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -692,6 +705,38 @@
             </div>
         </div>
     </section>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loadMoreBtn = document.getElementById("loadMoreProjects");
+            const hiddenProjects = document.querySelectorAll(".more-project");
+            let isExpanded = false;
+
+            loadMoreBtn.addEventListener("click", function () {
+                if (!isExpanded) {
+                    hiddenProjects.forEach(project => {
+                        project.classList.remove("hidden");
+                        project.classList.add("block");
+                    });
+                    loadMoreBtn.textContent = "View Less Projects";
+                    isExpanded = true;
+                } else {
+                    hiddenProjects.forEach(project => {
+                        project.classList.add("hidden");
+                        project.classList.remove("block");
+                    });
+                    loadMoreBtn.textContent = "View More Projects";
+                    isExpanded = false;
+                    window.scrollTo({
+                        top: document.getElementById("projects").offsetTop,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+    </script>
+    
+
 
     <!-- Publications Section -->
     <section id="publications" class="py-20 bg-white">
@@ -757,6 +802,7 @@
                                 A hands-on, beginner-friendly guide to AWS networking—demystifying VPCs, subnets, gateways, and route tables through real-world analogies, visual thinking, and a data scientist’s perspective.
                             </p>
                             <a href="https://medium.com/@m2analytics1117/decoding-aws-networking-vpcs-subnets-igws-nats-route-tables-made-simple-e52f4b740c84" 
+                            target="_blank"
                             class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition">
                                 Read on Medium
                                 <i class="fas fa-external-link-alt ml-2"></i>
@@ -782,7 +828,7 @@
                         <p class="text-gray-600 mb-4">
                             A beginner-friendly deep dive into batch vs streaming ingestion—exploring real-world use cases, tools like Kinesis and Kafka, and the mindset shift behind modern data pipelines.
                         </p>
-                        <a href="https://medium.com/@m2analytics1117/batch-vs-streaming-data-ingestion-a-complete-guide-for-data-engineers-d2a76a78bc44" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition">
+                        <a href="https://medium.com/@m2analytics1117/batch-vs-streaming-data-ingestion-a-complete-guide-for-data-engineers-d2a76a78bc44" target="_blank" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition">
                             Read on Medium
                             <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
@@ -806,7 +852,7 @@
                         <p class="text-gray-600 mb-4">
                             A relatable guide to Apache Airflow that turns messy scripts into clean, reliable workflows—packed with real-life analogies, practical tips, and Python-powered DAG magic.
                         </p>
-                        <a href="https://medium.com/@m2analytics1117/airflow-for-data-engineers-automate-your-pipelines-2ae8e5e1c2aa" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition">
+                        <a href="https://medium.com/@m2analytics1117/airflow-for-data-engineers-automate-your-pipelines-2ae8e5e1c2aa" target="_blank" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition">
                             Read on Medium
                             <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
@@ -989,6 +1035,9 @@
             </div>
         </div>
     </section>
+    
+
+
 
 
 <style>
@@ -999,16 +1048,33 @@
 </style>
 
 
-
-
-
-
-
-
-
-
-
 <script>
+
+     // Load more blogs
+    const loadMoreBlogs = document.getElementById('loadMoreBlogs');
+    const blogsContainer = document.getElementById('blogs-container');
+    const moreBlogs = document.querySelectorAll('.more-blog');
+    let blogsShown = 0;
+
+    loadMoreBlogs.addEventListener('click', () => {
+        let count = 0;
+        for (let i = blogsShown; i < moreBlogs.length && count < 3; i++) {
+            moreBlogs[i].classList.remove('hidden');
+            count++;
+            blogsShown++;
+        }
+
+        if (blogsShown >= moreBlogs.length) {
+            loadMoreBlogs.classList.add('hidden');
+        }
+
+        window.scrollTo({
+            top: blogsContainer.offsetTop + blogsContainer.offsetHeight - window.innerHeight,
+            behavior: 'smooth'
+        });
+    });
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -1038,7 +1104,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         behavior: 'smooth',
                         block: 'start'
                     });
-                }, isMobile ? 300 : 0); // Delay if mobile to wait for layout shift
+                }, isMobile ? 300 : 0);
             }
         });
     });
