@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manasi Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for animations and effects */
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #10b981, #6366f1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-pill:hover {
+            transform: scale(1.05);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #3b82f6;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: 
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #3b82f6; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold gradient-text">Hema Manasi</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-500 transition">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-500 transition">About</a>
+                    <a href="#experience" class="text-gray-700 hover:text-blue-500 transition">Experience</a>
+                    <a href="#education" class="text-gray-700 hover:text-blue-500 transition">Education</a>
+                    <a href="#certifications" class="text-gray-700 hover:text-blue-500 transition">Certifications</a>    
+                    <a href="#skills" class="text-gray-700 hover:text-blue-500 transition">Skills</a>                                                        
+                    <a href="#projects" class="text-gray-700 hover:text-blue-500 transition">Projects</a>
+                    <a href="#publications" class="text-gray-700 hover:text-blue-500 transition">Publications</a>
+                    <a href="#blogs" class="text-gray-700 hover:text-blue-500 transition">Blogs</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-500 transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-600">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-100 transition">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-100 transition">About</a>
+                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-100 transition">Experience</a>
+                 <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-100 transition">Education</a>
+                <a href="#certifications" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-100 transition">Certifications</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base fontmedium text-gray-700 hover:text-blue-500 hover:bg-gray-100 transition">Skills</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base fontmedium text-gray-700 hover:text-blue-500 hover:bg-gray-100 transition">Projects</a>            
+                <a href="#publications" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-100 transition">Publications</a>
+                <a href="#blogs" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-100 transition">Blogs</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-100 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50 py-20 px-4">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="text-center md:text-left">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                    Hi, I'm <span class="gradient-text">Hema Manasi P.</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-800 typewriter">
+                    Data Enthusiast
+                </h2>
+                <p class="text-lg text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
+                    Transforming raw data into meaningful insights and creating data-driven solutions.
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                    <a href="assets/HemaManasi-Resume.pdf" target="_blank" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition shadow-lg hover:shadow-xl">
+                            View Resume
+                        </a>
+                    <a href="#projects" class="px-6 py-3 border-2 border-blue-600 text-blue-600 hover:bg-blue-50 rounded-full font-medium transition">
+                        View Projects
+                    </a>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80">
+                    <div class="absolute inset-0 bg-blue-500 rounded-full opacity-20 blur-xl animate-pulse"></div>
+                    <img src="assets/1-pic.jpg" 
+                         alt="Profile Picture" 
+                         class="relative z-10 w-full h-full rounded-full object-cover border-4 border-white shadow-xl floating">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">About Me</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+
+            <!-- STACKED LAYOUT -->
+            <div class="flex flex-col gap-12 items-start">
+
+                <!-- Who I Am Section -->
+                <div>
+                    <p class="text-gray-600 text-lg mb-6">
+                        I'm a passionate data professional with expertise in data analysis, data engineering, machine learning, and data visualization. I specialize in transforming complex data into clear, actionable insights that drive business decisions.
+                    </p>
+                    <p class="text-gray-600 text-lg mb-6">
+                        With experience across multiple industries—including healthcare, finance, and legal analytics—I bring a unique perspective to data challenges. From predictive health dashboards to stock forecasting models and redaction detection systems, my work spans a wide range of impactful use cases. My approach combines technical skills with business acumen to deliver solutions that are both technically sound and strategically valuable.
+                    </p>
+                    <p class="text-gray-600 text-lg mb-6">
+                        I'm especially drawn to building scalable data pipelines and interactive dashboards that empower teams to make informed decisions in real time. Whether it's working with cloud-native architectures or designing custom metrics to monitor system performance, I thrive on solving problems end-to-end.
+                    </p>
+                    <p class="text-gray-500 text-base italic border-l-4 border-blue-300 pl-4">
+                        Fun fact: Offer me tiramisu, and there’s a good chance I’ll deliver crisp, insightful dashboards that even your non-tech stakeholders will love—dessert really does bring out my best work!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-gray-800 mb-2">My Experience</h2>
+        <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+        <p class="text-gray-600 mt-4 max-w-2xl mx-auto text-lg">
+            My professional journey working with data and analytics.
+        </p>
+        </div>
+
+        <div class="relative">
+        <div class="space-y-12 ml-12">
+
+            <!-- Experience 1 -->
+            <div class="relative flex justify-center">
+            <div class="bg-gray-50 rounded-xl p-6 shadow-lg card-hover max-w-4xl w-full">
+                <div class="flex items-center mb-2">
+                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                    <img src="https://media.licdn.com/dms/image/v2/D4D0BAQFqajiaiMI6Bg/company-logo_200_200/company-logo_200_200/0/1727487543625/myedmaster_llc_logo?e=2147483647&v=beta&t=FLnyOXnRLNVvjNJkdomwrW9jkaswYI8n4hKu9M-RftY" 
+                                alt="New Project" 
+                                class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Data Scientist</h3>
+                    <p class="text-gray-600 text-base">MyEdMaster LLC • May 2024 - Present</p>
+                </div>
+                </div>
+                <ul class="list-disc pl-6 text-gray-700 text-base leading-relaxed space-y-2">
+                <li>Collected, cleaned, and analyzed healthcare datasets using SQL and Python to support AI-driven interventions—streamlining preprocessing workflows and improving model accuracy by 20%.</li>
+                <li>Built interactive dashboards in Power BI and Tableau to track patient outcomes and visualize key health metrics.</li>
+                <li>Partnered with stakeholders to define requirements and deliver tailored reports and insights for data-backed decision-making.</li>
+                </ul>
+            </div>
+            </div>
+
+            <!-- Experience 2 -->
+            <div class="relative flex justify-center">
+            <div class="bg-gray-50 rounded-xl p-6 shadow-lg card-hover max-w-4xl w-full">
+                <div class="flex items-center mb-2">
+                <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center mr-4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQrAnmalnTXAkaunZJiLvF4LuCVTalns3GHg&s" 
+                                alt="New Project" 
+                                class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Data Science Research Assistant</h3>
+                    <p class="text-gray-600 text-base">Indiana University • Dec 2024 - May 2025</p>
+                </div>
+                </div>
+                <ul class="list-disc pl-6 text-gray-700 text-base leading-relaxed space-y-2">
+                <li>Built automated scraping workflows using ParseHub to extract legal text at scale, facilitating structured analysis of redacted content across document types.</li>
+                <li>Developed a machine learning system to detect and analyze redactions in legal documents, designing  pipeline for data extraction and storing results in a PostgreSQL database to enable efficient querying and secure access.</li>
+                <li>Collaborated with cross-functional teams to communicate system design, optimize performance, and ensure compliance with legal data privacy and governance standards.</li>
+                </ul>
+            </div>
+            </div>
+
+            <!-- Experience 3 -->
+            <div class="relative flex justify-center">
+            <div class="bg-gray-50 rounded-xl p-6 shadow-lg card-hover max-w-4xl w-full">
+                <div class="flex items-center mb-2">
+                <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                    <img src="data:image/jpeg;base64,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"
+                    alt="New Project" 
+                    class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Software Developer Intern</h3>
+                    <p class="text-gray-600 text-base">Broadridge • Jan 2023 - Jul 2023</p>
+                </div>
+                </div>
+                <ul class="list-disc pl-6 text-gray-700 text-base leading-relaxed space-y-2">
+                <li>Designed and executed automated test cases for GTD orders using Modern C++ and the Tbricks App API, reducing manual testing time and increasing validation coverage across trading workflows.</li>
+                <li>Resolved high-impact bugs and optimized the logic for instrument grouping across global markets, improving reliability of automated trading strategies.</li>
+                <li>Collaborated across QA and trading system teams to ensure robust, real-time deployments.</li>
+                </ul>
+            </div>
+            </div>
+
+            <!-- Experience 4 -->
+            <div class="relative flex justify-center">
+            <div class="bg-gray-50 rounded-xl p-6 shadow-lg card-hover max-w-4xl w-full">
+                <div class="flex items-center mb-2">
+                <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Logo_of_National_Institute_of_Technology_Agartala.png/1200px-Logo_of_National_Institute_of_Technology_Agartala.png"
+                     alt="New Project" 
+                     class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Data Science Research Assistant</h3>
+                    <p class="text-gray-600 text-base">NIT Agartala • Feb 2021 - Jul 2023</p>
+                </div>
+                </div>
+                <ul class="list-disc pl-6 text-gray-700 text-base leading-relaxed space-y-2">
+                <li>Designed a deep learning model using U-Net architecture on multispectral satellite imagery (Landslide4Sense), achieving 91.12% accuracy in landslide detection with enhanced precision and recall.</li>
+                <li>Engineered features using image segmentation, NDVI, and binary cross-entropy to reduce false positives in real-time hazard monitoring and improve model robustness.</li>
+                <li>Co-authored a peer-reviewed research paper, later published as a book chapter in Springer’s Lecture Notes in Networks and Systems series, contributing to advancements in geospatial disaster prediction.</li>
+                </ul>
+            </div>
+            </div>
+
+        </div>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Education</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+                    My academic background in data and related fields.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Education 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <!-- Logo Container -->
+                            <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                                <img src="https://media-cdn.socastsrm.com/wordpress/wp-content/blogs.dir/2338/files/2021/06/altius-e1630438900210.jpg" 
+                                    alt="NIT Agartala Logo" 
+                                    class="object-cover w-full h-full">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-800">Master's in Data Science</h3>
+                                <p class="text-gray-600">Indiana University, Bloomington • 2023 - 2025</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Focused on Machine Learning, AI, Computer Vision, and Big Data systems, with complementary expertise in Statistics, Econometrics, Data Visualization, and Social Media Mining.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-xs">GPA: 3.6/4.0</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Education 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <!-- Logo Container -->
+                            <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Logo_of_National_Institute_of_Technology_Agartala.png/1200px-Logo_of_National_Institute_of_Technology_Agartala.png" 
+                                    alt="NIT Agartala Logo" 
+                                    class="object-cover w-full h-full">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-800">Bachelor's in Computer Science</h3>
+                                <p class="text-gray-600">National Institute of Technology Agartala • 2019 - 2023</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Focused on core computer science foundations including algorithms, data structures, and operating systems, with additional exposure to artificial intelligence, mobile computing, cloud computing, and compiler design.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-xs">GPA: 3.5/4.0</span>                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 bg-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Certifications</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <!-- Certifications -->
+            <div class="mt-12">
+                <div id="certificationGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- First 3 always visible -->
+                    <div class="bg-white rounded-lg shadow-md p-6 flex items-start card-hover">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 overflow-hidden">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM Logo" class="object-contain w-8 h-8">
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">IBM Data Analysis with Python</h4>
+                            <p class="text-gray-600 text-sm">IBM • 2022</p>
+                            <a href="https://coursera.org/share/a1f86fed0ea927b7c5cde453ce56faaa" class="text-blue-600 text-sm hover:underline mt-1 inline-block">View Credential</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6 flex items-start card-hover">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 overflow-hidden">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM Logo" class="object-contain w-8 h-8">
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">IBM Databases and SQL for Data Science</h4>
+                            <p class="text-gray-600 text-sm">IBM • 2022</p>
+                            <a href="https://coursera.org/share/446a095975d52a57105af1bf9fb097c3" class="text-blue-600 text-sm hover:underline mt-1 inline-block">View Credential</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6 flex items-start card-hover">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 overflow-hidden">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM Logo" class="object-contain w-8 h-8">
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">IBM Python for Data Science, AI & Development</h4>
+                            <p class="text-gray-600 text-sm">IBM • 2022</p>
+                            <a href="https://www.coursera.org/account/accomplishments/verify/9ZMEB2QWMFYZ" class="text-blue-600 text-sm hover:underline mt-1 inline-block">View Credential</a>
+                        </div>
+                    </div>
+
+                    <!-- Hidden Certifications -->
+                    <div id="moreCerts" class="hidden grid sm:grid-cols-2 lg:grid-cols-3 gap-6 col-span-full mt-6">
+                        <div class="bg-white rounded-lg shadow-md p-6 flex items-start card-hover">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 overflow-hidden">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM Logo" class="object-contain w-8 h-8">
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Tools for Data Science</h4>
+                                <p class="text-gray-600 text-sm">IBM • 2022</p>
+                                <a href="https://coursera.org/share/bc8f3f6a74de6bba009ad06cf88bea0d" class="text-blue-600 text-sm hover:underline mt-1 inline-block">View Credential</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Toggle Button -->
+                    <div class="col-span-full text-center mt-4">
+                        <button id="toggleCerts" onclick="toggleCertifications()" class="px-6 py-3 border-2 border-blue-600 text-blue-600 hover:bg-blue-50 rounded-full font-medium transition">
+                            View More
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function toggleCertifications() {
+                    const moreCerts = document.getElementById('moreCerts');
+                    const toggleBtn = document.getElementById('toggleCerts');
+
+                    if (moreCerts.classList.contains('hidden')) {
+                        moreCerts.classList.remove('hidden');
+                        toggleBtn.textContent = "View Less";
+                    } else {
+                        moreCerts.classList.add('hidden');
+                        toggleBtn.textContent = "View More";
+                    }
+                }
+            </script>
+
+        </div>
+    </section>
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Technical Skills</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+
+            <!-- STACKED LAYOUT -->
+            <div class="flex flex-col gap-12 items-start">
+
+                <!-- My Skills Section -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-lg card-hover transition w-full">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">My Skills</h3>
+                    <div class="space-y-6">
+                        <!-- Languages -->
+            <div>
+                <h4 class="text-lg font-medium text-gray-700 mb-2"> Programming Languages</h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">Python</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">SQL</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">R</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">C</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">C++</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">JavaScript</span>
+                </div>
+            </div>
+
+            <!-- Database & Systems -->
+            <div>
+                <h4 class="text-lg font-medium text-gray-700 mb-2">Database & Cloud Platforms</h4>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">MySQL</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">PostgreSQL</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">NoSQL</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">AWS(S3, Aurora, Athena, Redshift)</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">Google BigQuery</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">SnowFlake</span>
+
+                </div>
+
+            <!-- Data Visualization -->
+            <div>
+                <h4 class="text-lg font-medium text-gray-700 mb-2">Data Visualization</h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">Power BI</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">Tableau</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">Gephi</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">Streamlit</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">Plotly</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">Matplotlib</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">Seaborn</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">Excel</span>
+                </div>
+            </div>
+
+            <!-- Machine Learning & AI -->
+            <div>
+                <h4 class="text-lg font-medium text-gray-700 mb-2">Data Engineering & Big Data Tools</h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">ETL</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">Apache (Spark, Kafka)</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">Apache Airflow</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">Hive</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">Hadoop</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">Pandas</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">Pig</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">RESTful APIs</span>
+                </div>
+            </div>
+
+            <!-- Tools & Frameworks -->
+            <div>
+                <h4 class="text-lg font-medium text-gray-700 mb-2">Machine Learning & AI</h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">Neural Networks</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">TensorFlow</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">LLM</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">NLP</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium transition">Azure OpenAI</span>            </div>
+            </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">My Projects</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+                    Selected projects showcasing my data analysis and visualization skills.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-container">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="assets/project2.png" 
+                             alt="Stock Analysis Dashboard" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Supply Chain Optimization</h3>
+                        <p class="text-gray-600 mb-4">
+                            Developed a full-scale supply chain analytics platform with demand forecasting, shipment tracking, and vendor performance analysis using Python, MongoDB, Tableau, and Streamlit. Designed custom metrics like Efficiency Index and Inventory Stability Score to flag risks and optimize costs.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Python</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">Streamlit</span>
+                            <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">Tableau</span>
+                            <span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">MongoDB</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">Pandas</span>
+                            <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">Folium</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Plotly</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">Prophet</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="https://github.com/manasi1102/Supply-Chain-Optimization-Platform/blob/main/README.md" class="text-blue-600 text-sm font-medium hover:underline">View Details</a>
+                            <a href="https://github.com/manasi1102/Supply-Chain-Optimization-Platform" class="text-gray-500 hover:text-gray-700">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtYlsuTc8ln2t4P7FiuxzO1cJ09wz9p2yxCQ&s" 
+                             alt="New Project" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">SMS Spam Detection</h3>
+                        <p class="text-gray-600 mb-4">
+                            Built a machine learning model to classify text messages as spam or not spam using NLP techniques. The project involved data cleaning, text preprocessing with NLTK, model training, performance evaluation, and deployment via a web app for real-time predictions.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Python</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">NLTK</span>
+                            <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">Streamlit</span>
+                            <span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">Pandas</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Numpy</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">Scikit-learn</span>
+                            <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">EDA</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="https://github.com/manasi1102/SMS-Spam-Detection/blob/4c12f13de69794a2695dbf80bb00057d45714064/README.md" class="text-blue-600 text-sm font-medium hover:underline">View Details</a>
+                            <a href="https://github.com/manasi1102/SMS-Spam-Detection.git" class="text-gray-500 hover:text-gray-700">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Sales Dashboard" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">LAPD Crime Dashboard</h3>
+                        <p class="text-gray-600 mb-4">
+                            Built an interactive Streamlit dashboard to visualize over 900,000 crime records from LAPD data, revealing trends, hotspots, and victim demographics. Used geospatial mapping, demographic analysis, and custom filters to deliver actionable insights for public safety and policy planning.
+
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Python</span>
+                            <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">Streamlit</span>
+                            <span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">Pandas</span>
+                            <span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs">Matplotlib</span>
+                            <span class="px-2 py-1 bg-pink-100 text pink-800 rounded-full text-xs">Geospatial</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="https://github.com/manasi1102/LAPD-Crime-Dataset-Visualisation/blob/main/README.md" class="text-blue-600 text-sm font-medium hover:underline">View Details</a>
+                            <a href="https://github.com/manasi1102/LAPD-Crime-Dataset-Visualisation.git" class="text-gray-500 hover:text-gray-700">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hidden projects that will be shown when "Load More" is clicked -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover hidden more-project">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://github.com/manasi1102/Performance_Tracker_Tableau-Dashboard/raw/main/image.png" 
+                             alt="Customer Segmentation" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Performance Tracker</h3>
+                        <p class="text-gray-600 mb-4">
+                            Designed an interactive Tableau dashboard to monitor key KPIs, sales trends, and regional performance using the Superstore dataset. Integrated advanced filters, visualized top-performing customers and products, and enabled multi-format report exports to support data-driven decision-making.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Python</span>
+                            <span class="px-2 py-1 bg-red-100 text-red-800 rounded-full text-xs">Tableau</span>
+                            <span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">Data Visualization</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="https://github.com/manasi1102/Performance_Tracker_Tableau-Dashboard/blob/main/README.md" class="text-blue-600 text-sm font-medium hover:underline">View Details</a>
+                            <a href="https://github.com/manasi1102/Performance_Tracker_Tableau-Dashboard.git" class="text-gray-500 hover:text-gray-700">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover hidden more-project">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://github.com/manasi1102/Book-Recommendation-System/blob/main/img1.png?raw=true" 
+                             alt="New Project" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Book Recommendation System</h3>
+                        <p class="text-gray-600 mb-4">
+                            Developed a collaborative filtering-based book recommendation system using Python and pandas. Leveraged user ratings and book metadata to recommend personalized books. The system uses data preprocessing, popularity metrics, and similarity scores to suggest relevant titles.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Python</span>
+                            <span class="px-2 py-1 bg-red-100 text-red-800 rounded-full text-xs">Streamlit</span>
+                            <span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">Scikit-learn</span>
+                            <span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">Random Forest</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="https://github.com/manasi1102/Book-Recommendation-System/blob/f3e741d5c3a54c57373da054da3f22a40c5a1120/README.md" class="text-blue-600 text-sm font-medium hover:underline">View Details</a>
+                            <a href="https://github.com/manasi1102/Book-Recommendation-System.git" class="text-gray-500 hover:text-gray-700">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover hidden more-project">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="New Project" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Fraud Detection</h3>
+                        <p class="text-gray-600 mb-4">
+                            Anomaly detection system to identify fraudulent transactions in real-time.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Python</span>
+                            <span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs">Isolation Forest</span>
+                            <span class="px-2 py-1 bg-pink-100 text-pink-800 rounded-full text-xs">Streamlit</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-blue-600 text-sm font-medium hover:underline">View Details</a>
+                            <a href="#" class="text-gray-500 hover:text-gray-700">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            
+            <div class="text-center mt-12">
+                <button id="loadMoreProjects" class="px-6 py-3 border-2 border-blue-600 text-blue-600 hover:bg-blue-50 rounded-full font-medium transition">
+                    View More Projects
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loadMoreBtn = document.getElementById("loadMoreProjects");
+            const hiddenProjects = document.querySelectorAll(".more-project");
+            let isExpanded = false;
+
+            loadMoreBtn.addEventListener("click", function () {
+                if (!isExpanded) {
+                    hiddenProjects.forEach(project => {
+                        project.classList.remove("hidden");
+                        project.classList.add("block");
+                    });
+                    loadMoreBtn.textContent = "View Less Projects";
+                    isExpanded = true;
+                } else {
+                    hiddenProjects.forEach(project => {
+                        project.classList.add("hidden");
+                        project.classList.remove("block");
+                    });
+                    loadMoreBtn.textContent = "View More Projects";
+                    isExpanded = false;
+                    window.scrollTo({
+                        top: document.getElementById("projects").offsetTop,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+    </script>
+
+
+    <!-- Publications Section -->
+    <section id="publications" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-gray-800 mb-2">Publications</h2>
+        <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+        </div>
+        
+        <div class="space-y-8">
+        <!-- Publication 1 -->
+        <div class="bg-gray-50 rounded-xl p-6 shadow-lg card-hover">
+            <h3 class="text-xl font-semibold text-gray-800">U-Net Deep Neural Network-Based Landslide Detection Method</h3>
+            <p class="text-sm text-gray-600 italic mb-4">Published in <strong>Springer</strong>, 2023</p>
+            
+            <ul class="list-disc pl-6 text-gray-700 text-base leading-relaxed space-y-2">
+            <li>Designed a deep neural network model using the U-Net architecture, achieving 91.12% accuracy in landslide detection by leveraging multispectral satellite imagery from the Landslide4Sense dataset, significantly improving performance and enhancing precision and recall.</li>
+            <li>Assisted in feature engineering and optimization using techniques like image segmentation, binary cross-entropy, and NDVI analysis, reducing false positives in real-time hazard monitoring.</li>
+            <li>This research was peer-reviewed and published as a chapter in the Springer book <em>“Intelligent Systems and Sustainable Computing”</em>, showcasing its academic contribution and practical relevance in disaster prediction.</li>
+            </ul>
+
+            <a href="https://link.springer.com/chapter/10.1007/978-981-99-4717-1_44" target="_blank" class="text-blue-600 text-sm hover:underline">
+            View Publication <i class="fas fa-external-link-alt ml-1 text-xs"></i>
+            </a>
+        </div>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- Blogs Section -->
+    <section id="blogs" class="py-20 bg-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">My Blogs</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+                    Sharing my knowledge and insights about data through writing.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="blogs-container">
+                <!-- Blog 1 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg card-hover">
+                    <!-- Image Header Section -->
+                    <div class="h-48 w-full">
+                        <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*1uaR1Pt6pIQ4kIFeNS_KDQ.png" 
+                            alt="AWS Networking Blog Image" 
+                            class="w-full h-full object-cover">
+                    </div>
+
+                    <!-- Content Section -->
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-gray-500 mb-2">
+                                <span>May 19, 2025</span>
+                                <span class="mx-2">•</span>
+                                <span>6 min read</span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                                Decoding AWS Networking: VPCs, Subnets, IGWs, NATs & Route Tables Made Simple
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                A hands-on, beginner-friendly guide to AWS networking—demystifying VPCs, subnets, gateways, and route tables through real-world analogies, visual thinking, and a data scientist’s perspective.
+                            </p>
+                            <a href="https://medium.com/@m2analytics1117/decoding-aws-networking-vpcs-subnets-igws-nats-route-tables-made-simple-e52f4b740c84" 
+                            class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition">
+                                Read on Medium
+                                <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                </div>
+
+                
+                <!-- Blog 2 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg card-hover">
+                    <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-600 flex items-center justify-center">
+                        <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*rxCCBeKE042c4J9IhrgrrA.png" 
+                            alt="AWS Networking Blog Image" 
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>May 25, 2025</span>
+                            <span class="mx-2">•</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Batch vs Streaming Data Ingestion: A Complete Guide for Data Engineers</h3>
+                        <p class="text-gray-600 mb-4">
+                            A beginner-friendly deep dive into batch vs streaming ingestion—exploring real-world use cases, tools like Kinesis and Kafka, and the mindset shift behind modern data pipelines.
+                        </p>
+                        <a href="https://medium.com/@m2analytics1117/batch-vs-streaming-data-ingestion-a-complete-guide-for-data-engineers-d2a76a78bc44" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition">
+                            Read on Medium
+                            <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Blog 3 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg card-hover">
+                    <div class="h-48 bg-gradient-to-r from-green-500 to-teal-600 flex items-center justify-center">
+                        <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*Aiz1T9qIXrVUhWC28lPyVw.jpeg" 
+                            alt="AWS Networking Blog Image" 
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>Jun 1, 2025</span>
+                            <span class="mx-2">•</span>
+                            <span>6 min read</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Airflow for Data Engineers: Automate Your Pipelines</h3>
+                        <p class="text-gray-600 mb-4">
+                            A relatable guide to Apache Airflow that turns messy scripts into clean, reliable workflows—packed with real-life analogies, practical tips, and Python-powered DAG magic.
+                        </p>
+                        <a href="https://medium.com/@m2analytics1117/airflow-for-data-engineers-automate-your-pipelines-2ae8e5e1c2aa" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition">
+                            Read on Medium
+                            <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hidden blogs that will be shown when "Load More" is clicked -->
+                <!-- <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg card-hover hidden more-blog">
+                    <div class="h-48 bg-gradient-to-r from-yellow-500 to-orange-600 flex items-center justify-center">
+                        <i class="fas fa-lightbulb text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>Nov 5, 2022</span>
+                            <span class="mx-2">•</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Feature Engineering for Machine Learning</h3>
+                        <p class="text-gray-600 mb-4">
+                            Techniques to create meaningful features from raw data to improve model performance.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition">
+                            Read on Medium
+                            <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg card-hover hidden more-blog">
+                    <div class="h-48 bg-gradient-to-r from-red-500 to-pink-600 flex items-center justify-center">
+                        <i class="fas fa-chart-pie text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>Sep 18, 2022</span>
+                            <span class="mx-2">•</span>
+                            <span>9 min read</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Dashboard Design Principles</h3>
+                        <p class="text-gray-600 mb-4">
+                            How to design dashboards that effectively communicate insights without overwhelming users.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition">
+                            Read on Medium
+                            <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg card-hover hidden more-blog">
+                    <div class="h-48 bg-gradient-to-r from-indigo-500 to-blue-600 flex items-center justify-center">
+                        <i class="fas fa-code text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>Jul 22, 2022</span>
+                            <span class="mx-2">•</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Python Data Analysis Workflow</h3>
+                        <p class="text-gray-600 mb-4">
+                            My efficient workflow for exploratory data analysis using Python libraries.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition">
+                            Read on Medium
+                            <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div> -->
+            </div>
+            
+            <div class="text-center mt-12">
+                <button id="loadMoreBlogs" class="px-6 py-3 border-2 border-blue-600 text-blue-600 hover:bg-blue-50 rounded-full font-medium transition">
+                    Load More Blogs
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-2">Get In Touch</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                <p class="text-white-600 mt-4 max-w-2xl mx-auto">
+                    Let’s connect! Whether it’s about data, ideas, or opportunities — I’d love to hear from you.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold text-white-800 mb-6">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-white-800">Email</h4>
+                                <a href="mailto:alex.johnson@example.com" class="text-white-600 hover:underline">phemamanasi@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-white-800">Location</h4>
+                                <p class="text-white-600">USA</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h4 class="font-medium text-gray-800 mb-4">Connect with me</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://www.linkedin.com/in/hmanasi/" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/manasi1102" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-700 hover:bg-gray-200 hover:text-gray-900 transition">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://medium.com/@m2analytics1117" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-700 hover:bg-orange-100 hover:text-orange-600 transition">
+                                <i class="fab fa-medium-m"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Send Me a Message</h3>
+                    
+                    <form action="https://formsubmit.co/phemamanasi@gmail.com" method="POST" class="space-y-4">
+                        <!-- Hidden inputs -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html"> <!-- Optional redirect -->
+
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                           <input type="text" id="name" name="name" required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                            <input type="text" id="subject" name="subject" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" name="message" rows="4" required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        </div>
+
+                        <button type="submit"
+                                class="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition">
+                            Send Message
+                        </button>
+                    </form>
+
+                    
+                    <div id="formSuccess" class="hidden mt-4 p-4 bg-green-100 text-green-800 rounded-lg">
+                        <i class="fas fa-check-circle mr-2"></i> Your message has been sent successfully!
+                    </div>
+                </div>
+                <div class = "text-center">
+                    <p class="text-gray-400 text-sm">© 2025 Hema Manasi Potnuru. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <script>
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Contact form submission
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // Simulate form submission
+        setTimeout(() => {
+            contactForm.reset();
+            formSuccess.classList.remove('hidden');
+
+            setTimeout(() => {
+                formSuccess.classList.add('hidden');
+            }, 3000);
+        }, 1000);
+    });
+
+
+    // Load more blogs
+    const loadMoreBlogs = document.getElementById('loadMoreBlogs');
+    const blogsContainer = document.getElementById('blogs-container');
+    const moreBlogs = document.querySelectorAll('.more-blog');
+    let blogsShown = 0;
+
+    loadMoreBlogs.addEventListener('click', () => {
+        let count = 0;
+        for (let i = blogsShown; i < moreBlogs.length && count < 3; i++) {
+            moreBlogs[i].classList.remove('hidden');
+            count++;
+            blogsShown++;
+        }
+
+        if (blogsShown >= moreBlogs.length) {
+            loadMoreBlogs.classList.add('hidden');
+        }
+
+        window.scrollTo({
+            top: blogsContainer.offsetTop + blogsContainer.offsetHeight - window.innerHeight,
+            behavior: 'smooth'
+        });
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
