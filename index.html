@@ -121,7 +121,7 @@
                     Transforming raw data into meaningful insights and creating data-driven solutions.
                 </p>
                 <div class="flex flex-wrap justify-center md:justify-start gap-4">
-                    <a href="assets/HemaManasi-Resume.pdf" target="_blank" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition shadow-lg hover:shadow-xl">
+                    <a href="assets/HemaManasiP-Resume.pdf" target="_blank" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition shadow-lg hover:shadow-xl">
                             View Resume
                         </a>
                     <a href="#projects" class="px-6 py-3 border-2 border-blue-600 text-blue-600 hover:bg-blue-50 rounded-full font-medium transition">
@@ -411,20 +411,7 @@
                     </div>
                 </div>
             </div>
-            <script>
-                function toggleCertifications() {
-                    const moreCerts = document.getElementById('moreCerts');
-                    const toggleBtn = document.getElementById('toggleCerts');
-
-                    if (moreCerts.classList.contains('hidden')) {
-                        moreCerts.classList.remove('hidden');
-                        toggleBtn.textContent = "View Less";
-                    } else {
-                        moreCerts.classList.add('hidden');
-                        toggleBtn.textContent = "View More";
-                    }
-                }
-            </script>
+            
 
         </div>
     </section>
@@ -705,37 +692,6 @@
             </div>
         </div>
     </section>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const loadMoreBtn = document.getElementById("loadMoreProjects");
-            const hiddenProjects = document.querySelectorAll(".more-project");
-            let isExpanded = false;
-
-            loadMoreBtn.addEventListener("click", function () {
-                if (!isExpanded) {
-                    hiddenProjects.forEach(project => {
-                        project.classList.remove("hidden");
-                        project.classList.add("block");
-                    });
-                    loadMoreBtn.textContent = "View Less Projects";
-                    isExpanded = true;
-                } else {
-                    hiddenProjects.forEach(project => {
-                        project.classList.add("hidden");
-                        project.classList.remove("block");
-                    });
-                    loadMoreBtn.textContent = "View More Projects";
-                    isExpanded = false;
-                    window.scrollTo({
-                        top: document.getElementById("projects").offsetTop,
-                        behavior: "smooth"
-                    });
-                }
-            });
-        });
-    </script>
-
 
     <!-- Publications Section -->
     <section id="publications" class="py-20 bg-white">
@@ -1034,79 +990,59 @@
         </div>
     </section>
 
-   
 
-    <script>
-    // Mobile menu toggle
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
+<style>
+.nav-active {
+    color: #3b82f6;
+    font-weight: 600;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
     const mobileMenu = document.getElementById('mobile-menu');
-    
-    mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
 
-    // Contact form submission
-    const contactForm = document.getElementById('contactForm');
-    const formSuccess = document.getElementById('formSuccess');
-
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        // Simulate form submission
-        setTimeout(() => {
-            contactForm.reset();
-            formSuccess.classList.remove('hidden');
-
-            setTimeout(() => {
-                formSuccess.classList.add('hidden');
-            }, 3000);
-        }, 1000);
-    });
-
-
-    // Load more blogs
-    const loadMoreBlogs = document.getElementById('loadMoreBlogs');
-    const blogsContainer = document.getElementById('blogs-container');
-    const moreBlogs = document.querySelectorAll('.more-blog');
-    let blogsShown = 0;
-
-    loadMoreBlogs.addEventListener('click', () => {
-        let count = 0;
-        for (let i = blogsShown; i < moreBlogs.length && count < 3; i++) {
-            moreBlogs[i].classList.remove('hidden');
-            count++;
-            blogsShown++;
-        }
-
-        if (blogsShown >= moreBlogs.length) {
-            loadMoreBlogs.classList.add('hidden');
-        }
-
-        window.scrollTo({
-            top: blogsContainer.offsetTop + blogsContainer.offsetHeight - window.innerHeight,
-            behavior: 'smooth'
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', function () {
+            mobileMenu.classList.toggle('hidden');
         });
-    });
+    }
 
-    // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
             const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
+            const target = document.querySelector(targetId);
+            if (target) {
+                e.preventDefault();
 
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
+                // Close mobile menu before scrolling
+                const isMobile = window.innerWidth < 768;
+                if (isMobile && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
 
-                // Close mobile menu if open
-                mobileMenu.classList.add('hidden');
+                // Use scrollIntoView with start block position
+                setTimeout(() => {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }, isMobile ? 300 : 0); // Delay if mobile to wait for layout shift
             }
         });
     });
+});
 </script>
 
 </body>
